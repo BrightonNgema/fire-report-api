@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@now/node-server"
+    }
+  ],
+  "env": {
+    "MONGO_URI": "mongodb://ohtech:w3bfpqnCeqV528X@ds157707.mlab.com:57707/fire-report"
+  }
+}
