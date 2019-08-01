@@ -7,11 +7,10 @@ module.exports = resolvers = {
   },
   Mutation: {
     addReport: async (root, { input }, { Report }) => {
-      console.log(input);
       const newReport = await new Report({
         ...input,
       }).save();
       return newReport;
-    }
+    },
   }
 };
