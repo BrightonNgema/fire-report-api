@@ -5,5 +5,9 @@
       "src": "index.js",
       "use": "@now/node-server"
     }
-  ]
+  ],
+  "env": {
+    "MONGO_URI": "mongodb://ohtech:w3bfpqnCeqV528X@ds157707.mlab.com:57707/fire-report",
+    "JWT_SECRET": "87TGYIEHJ3BKRHIEG0FD8Y9IEGUWRJKBR"
+  }
 }

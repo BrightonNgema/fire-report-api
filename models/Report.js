@@ -4,17 +4,21 @@ const Schema = mongoose.Schema;
 
 const ReportSchema = new Schema({
   cellnumber: {
-    type: String,
+    type: String
   },
   ipAddress: {
+    type: String
+  },
+  deviceId: {
     type: String,
+    required:true
   },
   address: {
     fulladdress: {
-      type: String,
+      type: String
     },
     geo: {
-      lat: { type: String},
+      lat: { type: String },
       lng: { type: String }
     }
   },
@@ -28,7 +32,7 @@ const ReportSchema = new Schema({
   },
   createdDate: {
     type: Date,
-    default: Date.now
+    default: new Date()
   }
 });
 

@@ -14,11 +14,16 @@ input AddressInput {
 
 input ReportInput {
   _id: ID
-  cellnumber: String
   ipAddress:String
   address:AddressInput
   createdDate:String
 }
+
+input UserInput{
+  cellnumber:String
+  deviceId:String
+}
+
 ####################### Types ##############################
 type Gecoords{
   lat:String
@@ -33,10 +38,20 @@ type Report {
   _id: ID
   cellnumber: String
   ipAddress:String
+  deviceId:String
   address:Address
   level:String
   status:String
   createdDate:String
+}
+
+type Token {
+    token: String!
+}
+
+type User{
+  cellnumber:String
+  deviceId:String
 }
 
 
@@ -45,13 +60,14 @@ type Report {
 
     type Query {
         reports:[Report]
+        user:User
     }
-
 
 ####################### Mutations ##############################
   # (A "Mutation" type will be covered later on.)
     type Mutation {
         addReport(input:ReportInput) : Report
+        registerUser(input:UserInput) : Token
     }
 
 `;
