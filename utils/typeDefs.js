@@ -60,6 +60,7 @@ type User{
 
     type Query {
         reports:[Report]
+        report(id:String):Report
         user:User
     }
 
